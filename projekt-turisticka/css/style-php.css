@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fb;
+    color: #222;
+}
+
+.php-header {
+    background: #0077b6;
+    width: 100%;
+}
+
+.php-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.php-logo {
+    width: 80px;
+}
+
+.php-menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.php-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.php-menu a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-page {
+    min-height: calc(100vh - 130px);
+    padding: 70px 10%;
+}
+
+.dashboard-hero {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.dashboard-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.dashboard-hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+.dashboard-card {
+    background: white;
+    width: 240px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.dashboard-card p {
+    font-size: 42px;
+    font-weight: bold;
+    color: #111;
+}
+
+.dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.php-btn {
+    background: #0077b6;
+    color: white;
+    padding: 13px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.php-btn:hover {
+    background: #0077cc;
+}
+
+.admin-btn {
+    background: #ff9800;
+}
+
+.admin-btn:hover {
+    background: #d97706;
+}
+
+.php-footer {
+    background: #0077cc;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.auth-page{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-card{
+    background:white;
+    width:420px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.auth-card h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.auth-card form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.auth-card input{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+.auth-card p{
+    margin-top:20px;
+    text-align:center;
+}
+
+.error{
+    color:red;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.php-page {
+    min-height: calc(100vh - 130px);
+    padding: 70px 10%;
+    background: #f4f8fb;
+}
+
+.php-page h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+    color: #222;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    overflow-x: auto;
+}
+
+.php-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.php-table th,
+.php-table td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.php-table th {
+    color: #0077b6;
+    font-weight: bold;
+}
+
+.admin-header {
+  background: #0077b6;
+  padding: 24px 40px;
+}
+
+.admin-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 34px;
+}
+
+.admin-page {
+  padding: 60px 5%;
+  background: black;
+  min-height: calc(100vh - 90px);
+}
+
+.admin-table-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111;
+  margin: 0;
+}
+
+.admin-table thead {
+  background: #0077cc;
+  color: white;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-btn-edit,
+.admin-btn-delete {
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+.admin-btn-edit {
+  background: #0077b6;
+}
+
+.admin-btn-delete {
+  background: #dc3545;
+}
+
+.admin-links {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.admin-links a {
+  background: #0077b6;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-header {
+  background: #0077b6;
+  padding: 24px 40px;
+}
+
+.admin-header h1 {
+  color: white;
+  margin: 0;
+  font-size: 34px;
+}
+
+.admin-page {
+  padding: 60px 5%;
+  background: black;
+  min-height: calc(100vh - 90px);
+}
+
+.admin-table-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #111;
+  margin: 0;
+}
+
+.admin-table thead {
+  background: #0077cc;
+  color: white;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 18px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-btn-edit,
+.admin-btn-delete {
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 4px;
+}
+
+.admin-btn-edit {
+  background: #0077b6;
+}
+
+.admin-btn-delete {
+  background: #dc3545;
+}
+
+.admin-links {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.admin-links a {
+  background: #0077b6;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}

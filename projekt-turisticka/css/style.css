@@ -1,0 +1,1150 @@
+/* RESET & BODY */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: black;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVIGACIJA */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #0077cc;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
+
+/* HERO / ANIMACIJA */
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* bitno za wipe */
+  background: rgb(0, 0, 0); /* start crno */
+}
+
+#container .hero-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  text-align: center;
+  line-height: 0.95;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+#container .hero-title span {
+  font-size: 0.5em;
+  display: block;
+  color: #0b95e6d0;
+}
+#target {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../slike/plane2.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+
+  /* START: potpuno sakriveno (crno se vidi) */
+  clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+}
+
+
+/* POPULARNE DESTINACIJE */
+section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.destinacije-lista {
+  list-style-type: square;
+  margin: 2rem auto;
+  padding-left: 0;
+  width: fit-content;
+}
+
+.destinacije-lista li {
+  margin: 0.5rem 0;
+}
+
+.destinacije-lista a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.destinacije-lista a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #222;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+
+/* TABLICA DESTINACIJA */
+table {
+    width: 80%;
+    margin: 2rem auto;        /* centriranje */
+    border-collapse: collapse;
+    background-color: #fff;   /* bijela pozadina */
+    color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Zaglavlje tablice */
+thead {
+    background-color: #0077cc;
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+/* Linije između redova */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover efekt */
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Zadnji red bez linije */
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+
+.slike-destinacija {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.slike-destinacija img {
+    width: 180px;
+    border-radius: 10px;
+    margin-left: -50px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    position: relative; /* BITNO za z-index */
+    z-index: 1;
+}
+
+/* razbacani nagib */
+.slike-destinacija img:nth-child(odd) {
+    transform: rotate(-6deg);
+}
+
+.slike-destinacija img:nth-child(even) {
+    transform: rotate(6deg);
+}
+
+/* hover */
+.slike-destinacija img:hover {
+    transform: scale(1.2) rotate(0deg) translateY(-10px);
+    z-index: 100; /* ovo je ključ */
+}
+
+.o-nama {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.o-nama p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.o-nama h2 {
+    margin-top: 30px;
+}
+
+.team-img {
+    width: 500px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.o-nama ul {
+    list-style: none;
+    padding: 0;
+}
+
+.o-nama ul li {
+    margin: 10px 0;
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+.checkout-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.checkout-form {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.checkout-form .field {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.checkout-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  outline: none;
+}
+
+.checkout-form input:focus {
+  border-color: #0b7fc6;
+}
+
+.btn {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* Kontakt stranica – layout */
+.page {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.contact-title {
+  margin: 0 0 8px 0;
+  font-size: clamp(28px, 4vw, 54px); /* da ne bude preogroman */
+  line-height: 1.05;
+  color: #111;
+  text-align: center;
+}
+
+.contact-subtitle {
+  margin: 0 0 22px 0;
+  text-align: center;
+  color: #555;
+}
+
+/* Forma */
+.contact-form .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #0b7fc6;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+/* Gumb */
+.btn {
+  margin-top: 16px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  background: #0b7fc6;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .contact-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.popular {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.popular h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+/* grid kartice */
+.dest-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* kartica */
+.dest-card {
+  position: relative;
+  height: 220px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 18px;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  background-size: cover;
+  background-position: center;
+  transform: translateY(0);
+  transition: transform .15s ease;
+}
+
+.dest-card:hover {
+  transform: translateY(-4px);
+}
+
+/* tamni overlay radi čitljivosti */
+.dest-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.15));
+}
+
+.dest-name {
+  position: relative;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+
+/* svakoj destinaciji druga slika */
+.dest-card[href*="pariz"] { background-image: url("../slike/pariz.jpg"); }
+.dest-card[href*="rim"] { background-image: url("../slike/rome-hero.jpg"); }
+.dest-card[href*="istanbul"] { background-image: url("../slike/istanbul1.jpg"); }
+
+/* responsive */
+@media (max-width: 900px) {
+  .dest-grid { grid-template-columns: 1fr; }
+  .dest-card { height: 200px; }
+}
+
+
+.hero-pariz {
+    height: 450px;
+    background-image: url("../slike/pariz-hero.jpg"); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-pariz::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-pariz h1 {
+    position: relative;
+    color: white;
+    font-size: 60px;
+    font-family: Georgia, serif;
+}
+
+/*
+   DESTINACIJE: OPĆI BLOKOVI
+   (Pariz / Rim / Istanbul) */
+
+.destinacija-blok {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 38px 20px;
+  text-align: center;
+}
+
+.destinacija-blok h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.destinacija-tekst {
+  max-width: 760px;
+  margin: 0 auto 22px;
+  opacity: 0.9;
+}
+
+/* INFO KARTICE (3 kom) */
+.destinacija-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px auto 22px;
+}
+
+.info-kartica {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.info-kartica h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.info-kartica p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* MINI PROGRAM */
+.program {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.program-dan {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: left;
+}
+
+.program-dan h3 {
+  margin-bottom: 6px;
+}
+
+.program-dan p {
+  opacity: 0.9;
+}
+
+/* ZNAMENITOSTI LISTA */
+.lista-znamenitosti {
+  list-style: none;
+  padding: 0;
+  margin: 12px auto 0;
+  max-width: 520px;
+}
+
+.lista-znamenitosti li {
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* =HERO: PARIZ*/
+
+.hero-pariz {
+  height: 420px;
+  background-image: url("../slike/pariz-hero.jpg"); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-pariz::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-pariz h1 {
+  position: relative;
+  color: white;
+  font-size: 64px;
+  font-family: Georgia, serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .destinacija-info,
+  .program {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-pariz {
+    height: 320px;
+  }
+
+  .hero-pariz h1 {
+    font-size: 48px;
+  }
+}
+
+/* HERO: ISTANBUL */
+
+.hero-istanbul {
+  height: 420px;
+  background-image: url("../slike/istanbul-hero.jpg"); 
+  background-size: cover;
+  background-position: center 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-istanbul::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-istanbul h1 {
+  position: relative;
+  color: white;
+  font-size: 64px;
+  font-family: Georgia, serif;
+}
+
+/* HERO: RIM */
+
+.hero-rim {
+  height: 420px;
+  background-image: url("../slike/rome-hero.jpg"); 
+  background-size: cover;
+  background-position: center 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-rim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-rim h1 {
+  position: relative;
+  color: white;
+  font-size: 64px;
+  font-family: Georgia, serif;
+}
+
+/*  HVALA STRANICA */
+
+.hvala-stranica {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.hvala-kartica {
+  width: 100%;
+  max-width: 720px;
+  text-align: center;
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.hvala-kartica h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hvala-kartica p {
+  opacity: 0.9;
+  margin-bottom: 18px;
+}
+
+.hvala-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: #8fd1ff;
+  text-decoration: none;
+}
+
+.hvala-link:hover {
+  text-decoration: underline;
+}
+
+/* RESPONZIVNOST (mobiteli i manji ekrani)  */
+
+@media (max-width: 768px) {
+
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .dest-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* RECENZIJE  */
+
+.recenzije {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.recenzije-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.recenzija {
+  background: rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.recenzija span {
+  display: block;
+  margin-top: 10px;
+  opacity: 0.8;
+
+}
+
+/*  KOŠARICA STRANICA  */
+
+.kosarica-stranica {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* NASLOV */
+
+.kosarica-naslov {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.kosarica-naslov h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.kosarica-opis {
+  opacity: 0.8;
+}
+
+/*  RASPORED  */
+
+.kosarica-raspored {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* KARTICE */
+
+.kosarica-kartica,
+.kosarica-sazetak {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.kosarica-podnaslov {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/*  STAVKA  */
+
+.kosarica-stavka {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Naziv destinacije */
+
+.stavka-naziv {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/*  DATUMI  */
+
+.stavka-datum {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stavka-datum label {
+  font-weight: 600;
+}
+
+.stavka-datum input[type="date"] {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.stavka-datum input[type="date"]:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.4);
+  outline: none;
+}
+
+/* GUMB */
+
+#potvrdiDatume {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#potvrdiDatume:hover {
+  background-color: #0056b3;
+}
+
+/*  REZULTAT  */
+
+.stavka-rezultat p {
+  margin: 5px 0;
+  font-size: 1rem;
+  background-color: #f0f8ff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/*  CIJENA  */
+
+.stavka-cijena b {
+  color: #28a745;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #e6f4ea;
+  padding: 6px 14px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/*  SAŽETAK */
+
+.sazetak-red {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin: 10px 0 14px;
+}
+
+.kosarica-akcije {
+  margin-top: 15px;
+}
+
+.kosarica-link {
+  color: #8fd1ff;
+  text-decoration: none;
+}
+
+.kosarica-link:hover {
+  text-decoration: underline;
+}
+
+.kosarica-napomena {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE  */
+
+@media (max-width: 900px) {
+
+  .kosarica-raspored {
+    grid-template-columns: 1fr;
+  }
+
+  .kosarica-naslov h1 {
+    font-size: 36px;
+  }
+
+}
+
+.stavka-rezultat {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.stavka-rezultat p {
+  background: #e9eef3;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+#vrijeme {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.kosarica-summary {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: fit-content;
+  margin: 0 auto 20px auto;
+  text-align: left;
+}
+
+.kosarica-summary h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.kosarica-summary p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.kosarica-summary span {
+  color: #888;
+}
+
+.kosarica-summary .cijena {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #00ff99;
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"] {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+button {
+  background: #1e88e5;
+  border: none;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+.stavka-datum,
+.stavka-kolicina,
+.stavka-rezultat,
+.stavka-cijena {
+  margin-top: 15px;
+}
+
+
+#cijenaIspis {
+  background: #1f3d2b;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #00ff99;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  background: #0077b6;
+  padding: 0 40px;
+  min-height: 64px;
+}
+
+
+.nav-menu {
+  flex: 1;
+  justify-content: center;
+}
+
+.auth-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-menu a:hover {
+  text-decoration: underline;
+}
+
+
+header nav.main-nav .nav-menu,
+header nav.main-nav .auth-menu {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+header nav.main-nav .nav-menu {
+  flex: 1 !important;
+  justify-content: center !important;
+}
+
+header nav.main-nav .auth-menu {
+  justify-content: flex-end !important;
+}
+
+header nav.main-nav a {
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+
+
+header {
+  position: relative;
+  background-color: #0077cc;
+  padding: 0 !important;
+  height: 60px !important;
+}
+
+header nav.main-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #0077b6 !important;
+
+  height: 60px !important;
+  padding: 0 20px !important;
+
+  position: relative !important;
+}
+
+header nav.main-nav .nav-menu {
+  flex: none !important;
+  justify-content: center !important;
+}
+
+/* LOGO U NAVIGACIJI */
+header nav.main-nav .logo {
+  width: 70px !important;
+  height: auto !important;
+  max-height: 45px !important;
+  object-fit: contain !important;
+
+  position: absolute !important;
+  left: 25px !important;
+  top: 12px !important;
+  transform: none !important;
+
+  margin: 0 !important;
+}
+
+/* PLAVI HEADER */
+header {
+  height: 60px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #0077cc !important;
+  position: relative !important;
+}
+
+/* NAVIGACIJA */
+header nav.main-nav {
+ display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  height: 60px !important;
+
+  padding: 0 30px !important;
+
+  background: #0077b6 !important;
+
+  position: relative !important;
+}
+
+/* MENU */
+header nav.main-nav .nav-menu {
+  display: flex !important;
+  flex: 1 !important;
+
+  justify-content: center !important;
+
+  gap: 28px !important;
+
+  list-style: none !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+}
+.nav-logo {
+  width: 70px !important;
+  height: auto !important;
+  max-height: 45px !important;
+  object-fit: contain !important;
+}
+.logo {
+  width: 100px !important;
+}
+
+header nav.main-nav .logo {
+  transition: width 0.3s ease !important;
+}
+
+header nav.main-nav .logo:hover {
+  width: 100px !important;
+}
+
+header nav.main-nav a:first-child {
+  display: inline-block;
+}
+
+header nav.main-nav .logo {
+  transition: all 0.3s ease !important;
+}
+
+header nav.main-nav .logo:hover {
+  transform: scale(2) !important;
+}
