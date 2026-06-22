@@ -99,13 +99,13 @@ if(isset($_POST['register'])) {
 
 <ul class="php-menu">
 
-<li><a href="index.php">Početna</a></li>
+<li><a href="../index.php">Početna</a></li>
 
-<li><a href="destinacije.php">Destinacije</a></li>
+<li><a href="../destinacije.php">Destinacije</a></li>
 
-<li><a href="o-nama.php">O nama</a></li>
+<li><a href="../o-nama.php">O nama</a></li>
 
-<li><a href="kontakt.php">Kontakt</a></li>
+<li><a href="../kontakt.php">Kontakt</a></li>
 
 </ul>
 
