@@ -187,7 +187,7 @@ C:\xampp\htdocs\projekt-turisticka
 
 http://localhost/projekt-turisticka/index.php
 
-## Autori
+## Autor
 
 Anamarija Katinić
 
