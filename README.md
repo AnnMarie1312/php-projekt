@@ -191,6 +191,3 @@ http://localhost/projekt-turisticka/index.php
 
 Anamarija Katinić
 
-## Napomena
-
-Projekt je razvijen u edukacijske svrhe kao projektni zadatak za kolegij Osnove PHP-a.
